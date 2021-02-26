@@ -13,19 +13,15 @@
 		BC853A2D25E92EBD0026B820 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC853A2B25E92EBD0026B820 /* Main.storyboard */; };
 		BC853A2F25E92EC00026B820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC853A2E25E92EC00026B820 /* Assets.xcassets */; };
 		BC853A3225E92EC00026B820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC853A3025E92EC00026B820 /* LaunchScreen.storyboard */; };
-		BC853A3D25E92EC00026B820 /* ShockExperimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC853A3C25E92EC00026B820 /* ShockExperimentTests.swift */; };
 		BC853A4825E92EC00026B820 /* ShockExperimentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC853A4725E92EC00026B820 /* ShockExperimentUITests.swift */; };
 		BCB6706625E93B8500B01C06 /* Shock in Frameworks */ = {isa = PBXBuildFile; productRef = BCB6706525E93B8500B01C06 /* Shock */; };
+		BCB6706E25E94B8200B01C06 /* GetCharactersJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6706D25E94B8200B01C06 /* GetCharactersJob.swift */; };
+		BCB6707725E94CE100B01C06 /* GetCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6707625E94CE100B01C06 /* GetCharactersResponse.swift */; };
+		BCB6708025E952BC00B01C06 /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6707F25E952BB00B01C06 /* URLSessionExtensions.swift */; };
+		BCB6708C25E9676000B01C06 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6708B25E9676000B01C06 /* NetworkConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BC853A3925E92EC00026B820 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BC853A1A25E92EBD0026B820 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BC853A2125E92EBD0026B820;
-			remoteInfo = ShockExperiment;
-		};
 		BC853A4425E92EC00026B820 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BC853A1A25E92EBD0026B820 /* Project object */;
@@ -44,23 +40,17 @@
 		BC853A2E25E92EC00026B820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC853A3125E92EC00026B820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC853A3325E92EC00026B820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC853A3825E92EC00026B820 /* ShockExperimentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShockExperimentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC853A3C25E92EC00026B820 /* ShockExperimentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShockExperimentTests.swift; sourceTree = "<group>"; };
-		BC853A3E25E92EC00026B820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC853A4325E92EC00026B820 /* ShockExperimentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShockExperimentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC853A4725E92EC00026B820 /* ShockExperimentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShockExperimentUITests.swift; sourceTree = "<group>"; };
 		BC853A4925E92EC00026B820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCB6706D25E94B8200B01C06 /* GetCharactersJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersJob.swift; sourceTree = "<group>"; };
+		BCB6707625E94CE100B01C06 /* GetCharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersResponse.swift; sourceTree = "<group>"; };
+		BCB6707F25E952BB00B01C06 /* URLSessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
+		BCB6708B25E9676000B01C06 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC853A1F25E92EBD0026B820 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC853A3525E92EC00026B820 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				BC853A2425E92EBD0026B820 /* ShockExperiment */,
-				BC853A3B25E92EC00026B820 /* ShockExperimentTests */,
 				BC853A4625E92EC00026B820 /* ShockExperimentUITests */,
 				BC853A2325E92EBD0026B820 /* Products */,
 				BCB6706425E93B8500B01C06 /* Frameworks */,
@@ -93,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				BC853A2225E92EBD0026B820 /* ShockExperiment.app */,
-				BC853A3825E92EC00026B820 /* ShockExperimentTests.xctest */,
 				BC853A4325E92EC00026B820 /* ShockExperimentUITests.xctest */,
 			);
 			name = Products;
@@ -105,21 +93,15 @@
 				BC853A2525E92EBD0026B820 /* AppDelegate.swift */,
 				BC853A2E25E92EC00026B820 /* Assets.xcassets */,
 				BC853A3325E92EC00026B820 /* Info.plist */,
+				BCB6706C25E94B7400B01C06 /* Jobs */,
 				BC853A3025E92EC00026B820 /* LaunchScreen.storyboard */,
 				BC853A2B25E92EBD0026B820 /* Main.storyboard */,
+				BCB6707525E94CD000B01C06 /* Models */,
+				BCB6707B25E94DA700B01C06 /* Network */,
 				BC853A2725E92EBD0026B820 /* SceneDelegate.swift */,
 				BC853A2925E92EBD0026B820 /* ViewController.swift */,
 			);
 			path = ShockExperiment;
-			sourceTree = "<group>";
-		};
-		BC853A3B25E92EC00026B820 /* ShockExperimentTests */ = {
-			isa = PBXGroup;
-			children = (
-				BC853A3E25E92EC00026B820 /* Info.plist */,
-				BC853A3C25E92EC00026B820 /* ShockExperimentTests.swift */,
-			);
-			path = ShockExperimentTests;
 			sourceTree = "<group>";
 		};
 		BC853A4625E92EC00026B820 /* ShockExperimentUITests */ = {
@@ -136,6 +118,31 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCB6706C25E94B7400B01C06 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				BCB6706D25E94B8200B01C06 /* GetCharactersJob.swift */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		BCB6707525E94CD000B01C06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BCB6707625E94CE100B01C06 /* GetCharactersResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCB6707B25E94DA700B01C06 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BCB6707F25E952BB00B01C06 /* URLSessionExtensions.swift */,
+				BCB6708B25E9676000B01C06 /* NetworkConstants.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,24 +166,6 @@
 			productName = ShockExperiment;
 			productReference = BC853A2225E92EBD0026B820 /* ShockExperiment.app */;
 			productType = "com.apple.product-type.application";
-		};
-		BC853A3725E92EC00026B820 /* ShockExperimentTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BC853A4F25E92EC00026B820 /* Build configuration list for PBXNativeTarget "ShockExperimentTests" */;
-			buildPhases = (
-				BC853A3425E92EC00026B820 /* Sources */,
-				BC853A3525E92EC00026B820 /* Frameworks */,
-				BC853A3625E92EC00026B820 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BC853A3A25E92EC00026B820 /* PBXTargetDependency */,
-			);
-			name = ShockExperimentTests;
-			productName = ShockExperimentTests;
-			productReference = BC853A3825E92EC00026B820 /* ShockExperimentTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		BC853A4225E92EC00026B820 /* ShockExperimentUITests */ = {
 			isa = PBXNativeTarget;
@@ -211,10 +200,6 @@
 					BC853A2125E92EBD0026B820 = {
 						CreatedOnToolsVersion = 12.3;
 					};
-					BC853A3725E92EC00026B820 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = BC853A2125E92EBD0026B820;
-					};
 					BC853A4225E92EC00026B820 = {
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = BC853A2125E92EBD0026B820;
@@ -238,7 +223,6 @@
 			projectRoot = "";
 			targets = (
 				BC853A2125E92EBD0026B820 /* ShockExperiment */,
-				BC853A3725E92EC00026B820 /* ShockExperimentTests */,
 				BC853A4225E92EC00026B820 /* ShockExperimentUITests */,
 			);
 		};
@@ -252,13 +236,6 @@
 				BC853A3225E92EC00026B820 /* LaunchScreen.storyboard in Resources */,
 				BC853A2F25E92EC00026B820 /* Assets.xcassets in Resources */,
 				BC853A2D25E92EBD0026B820 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC853A3625E92EC00026B820 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,17 +253,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCB6708C25E9676000B01C06 /* NetworkConstants.swift in Sources */,
 				BC853A2A25E92EBD0026B820 /* ViewController.swift in Sources */,
+				BCB6706E25E94B8200B01C06 /* GetCharactersJob.swift in Sources */,
+				BCB6708025E952BC00B01C06 /* URLSessionExtensions.swift in Sources */,
+				BCB6707725E94CE100B01C06 /* GetCharactersResponse.swift in Sources */,
 				BC853A2625E92EBD0026B820 /* AppDelegate.swift in Sources */,
 				BC853A2825E92EBD0026B820 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC853A3425E92EC00026B820 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC853A3D25E92EC00026B820 /* ShockExperimentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,11 +274,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BC853A3A25E92EC00026B820 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BC853A2125E92EBD0026B820 /* ShockExperiment */;
-			targetProxy = BC853A3925E92EC00026B820 /* PBXContainerItemProxy */;
-		};
 		BC853A4525E92EC00026B820 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BC853A2125E92EBD0026B820 /* ShockExperiment */;
@@ -384,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -439,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -482,48 +450,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		BC853A5025E92EC00026B820 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ShockExperimentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tazkiyatech.ShockExperimentTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShockExperiment.app/ShockExperiment";
-			};
-			name = Debug;
-		};
-		BC853A5125E92EC00026B820 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ShockExperimentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tazkiyatech.ShockExperimentTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShockExperiment.app/ShockExperiment";
 			};
 			name = Release;
 		};
@@ -582,15 +508,6 @@
 			buildConfigurations = (
 				BC853A4D25E92EC00026B820 /* Debug */,
 				BC853A4E25E92EC00026B820 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BC853A4F25E92EC00026B820 /* Build configuration list for PBXNativeTarget "ShockExperimentTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BC853A5025E92EC00026B820 /* Debug */,
-				BC853A5125E92EC00026B820 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
