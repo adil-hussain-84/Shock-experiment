@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Mustache",
+        "repositoryURL": "git@github.com:groue/GRMustache.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "671e2c5234e829c1f337c9d300bd6d9b21d1c42a",
+          "version": "4.0.1"
+        }
+      },
+      {
+        "package": "Shock",
+        "repositoryURL": "git@github.com:justeat/Shock.git",
+        "state": {
+          "branch": null,
+          "revision": "5887f3cf3d2959afb29582ec12e0b8904b2a5fb1",
+          "version": "5.1.0"
+        }
+      },
+      {
+        "package": "swift-nio",
+        "repositoryURL": "git@github.com:apple/swift-nio.git",
+        "state": {
+          "branch": null,
+          "revision": "6d3ca7e54e06a69d0f2612c2ce8bb8b7319085a4",
+          "version": "2.26.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
