@@ -58,12 +58,14 @@ class ShockExperimentUITests: XCTestCase {
     
     func test_getting_characters_succeeds_when_template_route_is_setup() {
         // Given.
+        let count = Int.random(in: 1...100)
+        
         let route: MockHTTPRoute = .template(
             method: .get,
             urlPath: "people",
             code: 200,
             filename: "template-response.json",
-            templateInfo: ["count": 2]
+            templateInfo: ["count": count]
         )
         
         mockServer.setup(route: route)
@@ -72,6 +74,6 @@ class ShockExperimentUITests: XCTestCase {
         application.launch()
         
         // Then.
-        XCTAssertTrue(application.staticTexts["Got 2 characters."].waitForExistence(timeout: 1))
+        XCTAssertTrue(application.staticTexts["Got \(count) characters."].waitForExistence(timeout: 1))
     }
 }
