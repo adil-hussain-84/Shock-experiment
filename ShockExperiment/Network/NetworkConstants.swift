@@ -11,7 +11,7 @@ class NetworkConstants {
     
     private static var baseURLString: String {
         if CommandLine.arguments.contains("-mockServer") {
-            return "http://localhost:9999/swapi.dev/api/"
+            return "http://localhost:6789/"
         } else {
             return "https://swapi.dev/api/"
         }
