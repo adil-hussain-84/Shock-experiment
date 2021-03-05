@@ -30,7 +30,7 @@ class ShockExperimentUITests: XCTestCase {
         mockServer.stop()
     }
     
-    func test_getting_characters_fails_when_route_is_not_setup() {
+    func test_app_launch_when_no_route_is_setup() {
         // When.
         application.launch()
         
@@ -38,7 +38,25 @@ class ShockExperimentUITests: XCTestCase {
         XCTAssertTrue(application.staticTexts["Failed getting characters."].waitForExistence(timeout: 1))
     }
     
-    func test_getting_characters_succeeds_when_simple_route_is_setup() {
+    func test_app_launch_when_simple_route_is_setup_to_return_bad_request_status_code() {
+        // Given.
+        let route: MockHTTPRoute = .simple(
+            method: .get,
+            urlPath: "people",
+            code: 400,
+            filename: nil
+        )
+        
+        mockServer.setup(route: route)
+        
+        // When.
+        application.launch()
+        
+        // Then.
+        XCTAssertTrue(application.staticTexts["Failed getting characters."].waitForExistence(timeout: 1))
+    }
+    
+    func test_app_launch_when_simple_route_is_setup_to_return_ok_status_code() {
         // Given.
         let route: MockHTTPRoute = .simple(
             method: .get,
@@ -56,7 +74,7 @@ class ShockExperimentUITests: XCTestCase {
         XCTAssertTrue(application.staticTexts["Got 0 characters."].waitForExistence(timeout: 1))
     }
     
-    func test_getting_characters_succeeds_when_template_route_is_setup() {
+    func test_app_launch_when_template_route_is_setup_to_return_ok_status_code() {
         // Given.
         let count = Int.random(in: 1...100)
         
