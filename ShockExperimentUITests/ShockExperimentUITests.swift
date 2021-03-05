@@ -94,4 +94,21 @@ class ShockExperimentUITests: XCTestCase {
         // Then.
         XCTAssertTrue(app.staticTexts["Got \(count) characters."].waitForExistence(timeout: 1))
     }
+    
+    func test_app_launch_when_route_is_setup_to_timeout() {
+        // Given.
+        let route: MockHTTPRoute = .timeout(
+            method: .get,
+            urlPath: "people",
+            timeoutInSeconds: 1
+        )
+        
+        mockServer.setup(route: route)
+        
+        // When.
+        app.launch()
+        
+        // Then.
+        XCTAssertTrue(app.staticTexts["Failed getting characters."].waitForExistence(timeout: 3))
+    }
 }
