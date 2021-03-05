@@ -10,15 +10,15 @@ import Shock
 
 class ShockExperimentUITests: XCTestCase {
     
-    private var application: XCUIApplication!
+    private var app: XCUIApplication!
     private var mockServer: MockServer!
     
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
         
-        application = XCUIApplication()
-        application.launchArguments = ["-mockServer"]
+        app = XCUIApplication()
+        app.launchArguments = ["-mockServer"]
         
         mockServer = MockServer(port: 6789, bundle: Bundle(for: type(of: self)))
         mockServer.shouldSendNotFoundForMissingRoutes = true
@@ -32,10 +32,10 @@ class ShockExperimentUITests: XCTestCase {
     
     func test_app_launch_when_no_route_is_setup() {
         // When.
-        application.launch()
+        app.launch()
         
         // Then.
-        XCTAssertTrue(application.staticTexts["Failed getting characters."].waitForExistence(timeout: 1))
+        XCTAssertTrue(app.staticTexts["Failed getting characters."].waitForExistence(timeout: 1))
     }
     
     func test_app_launch_when_simple_route_is_setup_to_return_bad_request_status_code() {
@@ -50,10 +50,10 @@ class ShockExperimentUITests: XCTestCase {
         mockServer.setup(route: route)
         
         // When.
-        application.launch()
+        app.launch()
         
         // Then.
-        XCTAssertTrue(application.staticTexts["Failed getting characters."].waitForExistence(timeout: 1))
+        XCTAssertTrue(app.staticTexts["Failed getting characters."].waitForExistence(timeout: 1))
     }
     
     func test_app_launch_when_simple_route_is_setup_to_return_ok_status_code() {
@@ -68,10 +68,10 @@ class ShockExperimentUITests: XCTestCase {
         mockServer.setup(route: route)
         
         // When.
-        application.launch()
+        app.launch()
         
         // Then.
-        XCTAssertTrue(application.staticTexts["Got 0 characters."].waitForExistence(timeout: 1))
+        XCTAssertTrue(app.staticTexts["Got 0 characters."].waitForExistence(timeout: 1))
     }
     
     func test_app_launch_when_template_route_is_setup_to_return_ok_status_code() {
@@ -89,9 +89,9 @@ class ShockExperimentUITests: XCTestCase {
         mockServer.setup(route: route)
         
         // When.
-        application.launch()
+        app.launch()
         
         // Then.
-        XCTAssertTrue(application.staticTexts["Got \(count) characters."].waitForExistence(timeout: 1))
+        XCTAssertTrue(app.staticTexts["Got \(count) characters."].waitForExistence(timeout: 1))
     }
 }
