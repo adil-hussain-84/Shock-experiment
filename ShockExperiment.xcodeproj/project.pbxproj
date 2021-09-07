@@ -213,7 +213,7 @@
 				};
 			};
 			buildConfigurationList = BC853A1D25E92EBD0026B820 /* Build configuration list for PBXProject "ShockExperiment" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
