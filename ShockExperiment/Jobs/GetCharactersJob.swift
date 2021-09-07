@@ -13,7 +13,7 @@ class GetCharactersJob {
     
     func getCharacters() throws -> GetCharactersResponse {
         
-        let url = try NetworkConstants.baseURL().appendingPathComponent("people")
+        let url = try BaseURLProvider.baseURL().appendingPathComponent("people")
         
         let (data, urlResponse) = try urlSession.synchronousDataTask(with: url)
         

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkConstants {
+class BaseURLProvider {
     
     private static var baseURLString: String {
         if CommandLine.arguments.contains("-mockServer") {
@@ -19,13 +19,13 @@ class NetworkConstants {
     
     static func baseURL() throws -> URL {
         guard let url = URL(string: baseURLString) else {
-            throw NetworkConstantsError.FailedInitialisingURL(urlString: baseURLString)
+            throw BaseURLError.FailedInitialisingURL(urlString: baseURLString)
         }
         
         return url
     }
 }
 
-fileprivate enum NetworkConstantsError: Error {
+fileprivate enum BaseURLError: Error {
     case FailedInitialisingURL(urlString: String)
 }
