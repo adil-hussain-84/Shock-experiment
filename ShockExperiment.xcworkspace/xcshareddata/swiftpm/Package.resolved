@@ -15,8 +15,8 @@
         "repositoryURL": "git@github.com:justeat/Shock.git",
         "state": {
           "branch": null,
-          "revision": "5887f3cf3d2959afb29582ec12e0b8904b2a5fb1",
-          "version": "5.1.0"
+          "revision": "c2287de99d5a0febbcfe6001ab3f2e055f9c0181",
+          "version": "6.0.3"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "git@github.com:apple/swift-nio.git",
         "state": {
           "branch": null,
-          "revision": "6d3ca7e54e06a69d0f2612c2ce8bb8b7319085a4",
-          "version": "2.26.0"
+          "revision": "94f41c4121a82fae5c7b1cb03e630e9f9e5e20f1",
+          "version": "2.32.1"
         }
       }
     ]
