@@ -10,9 +10,9 @@ The workspace contains an application target ([ShockExperiment](ShockExperiment)
 
 # Setup
 
-1. Clone this repository;
-1. Open the [ShockExperiment.xcworkspace](ShockExperiment.xcworkspace) file in Xcode;
-1. Build the project;
+1. Clone this repository.
+1. Open the [ShockExperiment.xcworkspace](ShockExperiment.xcworkspace) file in Xcode.
+1. Build the project.
 1. Run the tests.
 
 This workspace assumes you have a GitHub source control account added to your Xcode preferences. Xcode uses your GitHub account to fetch this workspace's Swift package dependencies.
