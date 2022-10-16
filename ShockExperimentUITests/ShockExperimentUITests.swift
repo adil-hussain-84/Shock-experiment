@@ -17,12 +17,13 @@ class ShockExperimentUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         
-        app = XCUIApplication()
-        app.launchArguments = ["-mockServer"]
-        
         mockServer = MockServer(port: 6789, bundle: Bundle(for: type(of: self)))
         mockServer.shouldSendNotFoundForMissingRoutes = true
         mockServer.start()
+        
+        app = XCUIApplication()
+        app.launchArguments = ["-mockServer"]
+        app.launch()
     }
     
     override func tearDown() {
@@ -30,15 +31,15 @@ class ShockExperimentUITests: XCTestCase {
         mockServer.stop()
     }
     
-    func test_app_launch_when_no_route_is_setup() {
+    func test_fetch_characters_when_no_route_is_setup() {
         // When.
-        app.launch()
+        app.buttons["FetchCharactersButton"].tap()
         
         // Then.
         XCTAssertTrue(app.staticTexts["Failed getting characters."].waitForExistence(timeout: 1))
     }
     
-    func test_app_launch_when_simple_route_is_setup_to_return_bad_request_status_code() {
+    func test_fetch_characters_when_simple_route_is_setup_to_return_bad_request_status_code() {
         // Given.
         let route: MockHTTPRoute = .simple(
             method: .get,
@@ -50,13 +51,13 @@ class ShockExperimentUITests: XCTestCase {
         mockServer.setup(route: route)
         
         // When.
-        app.launch()
+        app.buttons["FetchCharactersButton"].tap()
         
         // Then.
         XCTAssertTrue(app.staticTexts["Failed getting characters."].waitForExistence(timeout: 1))
     }
     
-    func test_app_launch_when_simple_route_is_setup_to_return_ok_status_code() {
+    func test_fetch_characters_when_simple_route_is_setup_to_return_ok_status_code() {
         // Given.
         let route: MockHTTPRoute = .simple(
             method: .get,
@@ -68,13 +69,13 @@ class ShockExperimentUITests: XCTestCase {
         mockServer.setup(route: route)
         
         // When.
-        app.launch()
+        app.buttons["FetchCharactersButton"].tap()
         
         // Then.
         XCTAssertTrue(app.staticTexts["Got 0 characters."].waitForExistence(timeout: 1))
     }
     
-    func test_app_launch_when_template_route_is_setup_to_return_ok_status_code() {
+    func test_fetch_characters_when_template_route_is_setup_to_return_ok_status_code() {
         // Given.
         let count = Int.random(in: 1...100)
         
@@ -89,13 +90,13 @@ class ShockExperimentUITests: XCTestCase {
         mockServer.setup(route: route)
         
         // When.
-        app.launch()
+        app.buttons["FetchCharactersButton"].tap()
         
         // Then.
         XCTAssertTrue(app.staticTexts["Got \(count) characters."].waitForExistence(timeout: 1))
     }
     
-    func test_app_launch_when_route_is_setup_to_timeout() {
+    func test_fetch_characters_when_route_is_setup_to_timeout() {
         // Given.
         let route: MockHTTPRoute = .timeout(
             method: .get,
@@ -106,7 +107,7 @@ class ShockExperimentUITests: XCTestCase {
         mockServer.setup(route: route)
         
         // When.
-        app.launch()
+        app.buttons["FetchCharactersButton"].tap()
         
         // Then.
         XCTAssertTrue(app.staticTexts["Failed getting characters."].waitForExistence(timeout: 3))

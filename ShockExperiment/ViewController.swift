@@ -9,16 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var loadingLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     
     private var getCharactersJob = GetCharactersJob()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadCharacters()
+        statusLabel.text = ""
     }
     
-    private func loadCharacters() {
+    @IBAction func onFetchCharactersButtonTapped(_ sender: Any) {
+        fetchCharacters()
+    }
+    
+    private func fetchCharacters() {
+        statusLabel.text = "Fetching characters..."
+        
         DispatchQueue.global(qos: .userInitiated).async {
             do {
                 let getCharactersResponse = try self.getCharactersJob.getCharacters()
@@ -31,10 +37,10 @@ class ViewController: UIViewController {
     }
     
     private func onGetCharactersJobSucceeded(_ getCharactersResponse: GetCharactersResponse) {
-        loadingLabel.text = "Got \(getCharactersResponse.count) characters."
+        statusLabel.text = "Got \(getCharactersResponse.count) characters."
     }
     
     private func onGetCharactersJobFailed() {
-        loadingLabel.text = "Failed getting characters."
+        statusLabel.text = "Failed getting characters."
     }
 }
