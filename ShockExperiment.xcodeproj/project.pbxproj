@@ -94,12 +94,12 @@
 			children = (
 				BC853A2525E92EBD0026B820 /* AppDelegate.swift */,
 				BC853A2E25E92EC00026B820 /* Assets.xcassets */,
+				BCB6708B25E9676000B01C06 /* BaseURLProvider.swift */,
+				BCB6706D25E94B8200B01C06 /* GetCharactersJob.swift */,
+				BCB6707625E94CE100B01C06 /* GetCharactersResponse.swift */,
 				BC853A3325E92EC00026B820 /* Info.plist */,
-				BCB6706C25E94B7400B01C06 /* Jobs */,
 				BC853A3025E92EC00026B820 /* LaunchScreen.storyboard */,
 				BC853A2B25E92EBD0026B820 /* Main.storyboard */,
-				BCB6707525E94CD000B01C06 /* Models */,
-				BCB6707B25E94DA700B01C06 /* Network */,
 				BC853A2725E92EBD0026B820 /* SceneDelegate.swift */,
 				BC853A2925E92EBD0026B820 /* ViewController.swift */,
 			);
@@ -122,30 +122,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BCB6706C25E94B7400B01C06 /* Jobs */ = {
-			isa = PBXGroup;
-			children = (
-				BCB6706D25E94B8200B01C06 /* GetCharactersJob.swift */,
-			);
-			path = Jobs;
-			sourceTree = "<group>";
-		};
-		BCB6707525E94CD000B01C06 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BCB6707625E94CE100B01C06 /* GetCharactersResponse.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		BCB6707B25E94DA700B01C06 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				BCB6708B25E9676000B01C06 /* BaseURLProvider.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
