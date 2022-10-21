@@ -17,7 +17,6 @@
 		BCB6706625E93B8500B01C06 /* Shock in Frameworks */ = {isa = PBXBuildFile; productRef = BCB6706525E93B8500B01C06 /* Shock */; };
 		BCB6706E25E94B8200B01C06 /* GetCharactersJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6706D25E94B8200B01C06 /* GetCharactersJob.swift */; };
 		BCB6707725E94CE100B01C06 /* GetCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6707625E94CE100B01C06 /* GetCharactersResponse.swift */; };
-		BCB6708025E952BC00B01C06 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6707F25E952BB00B01C06 /* URLSessionExtension.swift */; };
 		BCB6708C25E9676000B01C06 /* BaseURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6708B25E9676000B01C06 /* BaseURLProvider.swift */; };
 		BCB6709625E97C7900B01C06 /* simple-response.json in Resources */ = {isa = PBXBuildFile; fileRef = BCB6709525E97C7900B01C06 /* simple-response.json */; };
 		BCB6709C25E97F9D00B01C06 /* template-response.json.mustache in Resources */ = {isa = PBXBuildFile; fileRef = BCB6709B25E97F9D00B01C06 /* template-response.json.mustache */; };
@@ -47,7 +46,6 @@
 		BC853A4925E92EC00026B820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCB6706D25E94B8200B01C06 /* GetCharactersJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersJob.swift; sourceTree = "<group>"; };
 		BCB6707625E94CE100B01C06 /* GetCharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersResponse.swift; sourceTree = "<group>"; };
-		BCB6707F25E952BB00B01C06 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
 		BCB6708B25E9676000B01C06 /* BaseURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLProvider.swift; sourceTree = "<group>"; };
 		BCB6709525E97C7900B01C06 /* simple-response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "simple-response.json"; sourceTree = "<group>"; };
 		BCB6709B25E97F9D00B01C06 /* template-response.json.mustache */ = {isa = PBXFileReference; lastKnownFileType = text; path = "template-response.json.mustache"; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				BCB6708B25E9676000B01C06 /* BaseURLProvider.swift */,
-				BCB6707F25E952BB00B01C06 /* URLSessionExtension.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -264,7 +261,6 @@
 				BCB6708C25E9676000B01C06 /* BaseURLProvider.swift in Sources */,
 				BC853A2A25E92EBD0026B820 /* ViewController.swift in Sources */,
 				BCB6706E25E94B8200B01C06 /* GetCharactersJob.swift in Sources */,
-				BCB6708025E952BC00B01C06 /* URLSessionExtension.swift in Sources */,
 				BCB6707725E94CE100B01C06 /* GetCharactersResponse.swift in Sources */,
 				BC853A2625E92EBD0026B820 /* AppDelegate.swift in Sources */,
 				BC853A2825E92EBD0026B820 /* SceneDelegate.swift in Sources */,
@@ -360,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -415,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

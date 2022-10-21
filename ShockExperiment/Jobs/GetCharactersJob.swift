@@ -11,11 +11,11 @@ class GetCharactersJob {
     
     private let urlSession = URLSession(configuration: .default)
     
-    func getCharacters() throws -> GetCharactersResponse {
+    func getCharacters() async throws -> GetCharactersResponse {
         
         let url = try BaseURLProvider.baseURL().appendingPathComponent("people")
         
-        let (data, urlResponse) = try urlSession.synchronousDataTask(with: url)
+        let (data, urlResponse) = try await urlSession.data(from: url)
         
         guard let httpURLResponse = urlResponse as? HTTPURLResponse else {
             throw GetCharactersJobError.URLResponseIsWrongType
@@ -27,13 +27,9 @@ class GetCharactersJob {
             throw GetCharactersJobError.BadStatusCode(statusCode: statusCode)
         }
         
-        guard let unwrappedData = data else {
-            throw GetCharactersJobError.NilData
-        }
-        
         let jsonDecoder = JSONDecoder()
         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-        let getCharactersResponse = try jsonDecoder.decode(GetCharactersResponse.self, from: unwrappedData)
+        let getCharactersResponse = try jsonDecoder.decode(GetCharactersResponse.self, from: data)
         
         return getCharactersResponse
     }
@@ -42,5 +38,4 @@ class GetCharactersJob {
 fileprivate enum GetCharactersJobError: Error {
     case URLResponseIsWrongType
     case BadStatusCode(statusCode: Int)
-    case NilData
 }

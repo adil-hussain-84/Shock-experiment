@@ -25,13 +25,13 @@ class ViewController: UIViewController {
     private func fetchCharacters() {
         statusLabel.text = "Fetching characters..."
         
-        DispatchQueue.global(qos: .userInitiated).async {
+        Task(priority: .userInitiated) {
             do {
-                let getCharactersResponse = try self.getCharactersJob.getCharacters()
+                let getCharactersResponse = try await self.getCharactersJob.getCharacters()
                 
-                DispatchQueue.main.async { self.onGetCharactersJobSucceeded(getCharactersResponse) }
+                self.onGetCharactersJobSucceeded(getCharactersResponse)
             } catch {
-                DispatchQueue.main.async { self.onGetCharactersJobFailed() }
+                self.onGetCharactersJobFailed()
             }
         }
     }
