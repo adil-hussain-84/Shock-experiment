@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -173,8 +173,9 @@
 		BC853A1A25E92EBD0026B820 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					BC853A2125E92EBD0026B820 = {
 						CreatedOnToolsVersion = 12.3;
@@ -186,7 +187,7 @@
 				};
 			};
 			buildConfigurationList = BC853A1D25E92EBD0026B820 /* Build configuration list for PBXProject "ShockExperiment" */;
-			compatibilityVersion = "Xcode 11.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
